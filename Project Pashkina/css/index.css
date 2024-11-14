@@ -105,12 +105,19 @@ header>span.btn--game>a:hover {
     height: 100%;
 }
 
-
+.game h1 {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+    transform: translateY(-600px);
+}
 
 /*Об игре*/
 
 .about--game {
-    padding: 50px 0;
+    padding-bottom: 100px;
     color: black;
 }
 
@@ -146,7 +153,7 @@ header>span.btn--game>a:hover {
 
 .reviews h2 {
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     font-size: 48px;
     font-weight: 600;
 }
@@ -167,6 +174,7 @@ header>span.btn--game>a:hover {
 .reviews .reviews--blocks .block img {
     display: block;
     margin: 0 auto;
+    transform: translateY(-50px);
 }
 
 .reviews .reviews--blocks .block .block--text {
@@ -179,10 +187,12 @@ header>span.btn--game>a:hover {
 
 .reviews .reviews--blocks .block p {
     font-size: 24px;
+    margin-top: 10px;
 }
 
 .reviews .reviews--blocks .block h5 {
     font-size: 24px;
+    margin-top: 10px;
 }
 
 /*Футер*/
@@ -203,8 +213,8 @@ footer .footer--block p {
 }
 
 footer .footer--block h4 {
-    font-weight: 500;
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 29px;
 }
 
 footer .footer--block ul {
@@ -212,7 +222,7 @@ footer .footer--block ul {
 }
 
 footer .footer--block ul li {
-    margin-top: 7px;
+    margin: 15px 0;
 }
 
 footer .footer--block ul li a {
