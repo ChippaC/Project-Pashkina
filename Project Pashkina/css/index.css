@@ -26,7 +26,8 @@ img {
 }
 
 .container {
-    width: 1400px;
+    min-width: 1400px;
+    max-width: max-content;
     margin: 0 auto;
 }
 
@@ -100,7 +101,6 @@ header>span.btn--game>a:hover {
 
 .game {
     width: 100%;
-    height: 100%;
     margin-bottom: -10px;
 }
 
@@ -109,7 +109,6 @@ header>span.btn--game>a:hover {
     font-weight: 700;
     font-style: italic;
     text-transform: capitalize;
-    text-align: center;
     position: absolute;
     top: 60%;
     left: 50%;
