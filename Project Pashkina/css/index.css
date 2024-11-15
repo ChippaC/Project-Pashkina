@@ -235,6 +235,10 @@ footer .footer--block ul li a {
     color: black;
 }
 
+footer .footer--block ul li a:hover {
+    text-decoration: underline;
+}
+
 footer .footer--block .contact--with--us p {
     margin: 8px 0;
 }
