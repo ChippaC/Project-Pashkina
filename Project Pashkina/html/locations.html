@@ -8,10 +8,11 @@
         У АВТОРА НА КОМПЬЮТЕРЕ ВСЁ ОК
     -->
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/slider.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Локации</title>
 </head>
 
 <body>
@@ -25,8 +26,8 @@
             <!--Навигация-->
             <nav>
                 <ul>
-                    <li class="active"><a href="/html/index.html">Об игре</a></li>
-                    <li><a href="/html/locations.html">Локации</a></li>
+                    <li><a href="/html/index.html">Об игре</a></li>
+                    <li class="active"><a href="/html/locations.html">Локации</a></li>
                     <li><a href="/html/reviews.html">Отзывы</a></li>
                 </ul>
             </nav>
@@ -41,21 +42,28 @@
         <h1>ведьма боша</h1>
     </div>
 
-    <!--Об игре-->
-    <div class="container about--game">
-        <h2>Об игре</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non fugiat officia doloribus. Expedita ipsam quo
-            vero cum nam, maiores illum debitis pariatur autem laudantium perspiciatis? Nesciunt quas ipsum praesentium,
-            quia laboriosam velit atque, soluta ea repellat quibusdam cumque beatae cupiditate illum qui corporis
-            ducimus dicta maxime quam a minima? Dolore! <br><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque maiores corrupti, cum quos
-            reprehenderit sunt hic saepe consequatur provident modi consectetur consequuntur velit at ut laborum commodi
-            natus esse blanditiis reiciendis harum fuga sequi architecto vitae? Provident numquam, animi saepe commodi
-            reiciendis, perferendis, eos cumque ratione sapiente hic perspiciatis. <br><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nam adipisci qui voluptas, eligendi ipsum.
-            Quo commodi corrupti tempora animi optio quisquam! Facere at quae debitis laboriosam quo adipisci recusandae
-            modi tempore a, minus voluptates est veniam nihil illum, odio ad aperiam hic iure exercitationem nemo.
-            Quidem nihil ea quam.</p>
+    <!--Задний фон-->
+    <div class="wrapper">
+        <!--Локации-->
+        <div class="container location">
+            <h2>Локации</h2>
+
+            <!--Слайдер-->
+            <!--Если хотим новые фото, то вставляем новые img-->
+            <div class="slider">
+                <img class='slider-img' src="/img/slide.png">
+                <img class='slider-img' src="/img/slide2.png">
+
+                <div>
+                    <img style='opacity: 1; height: 50px;' class="prev controlls" src="/img/left.png" alt="">
+                </div>
+
+                <div>
+                    <img style='opacity: 1; height: 50px;' class="next controlls" src="/img/right.png" alt="">
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <!--Задний фон-->
@@ -86,6 +94,7 @@
             <p>© 2024-2024 Все права защищены, Павлухин Константин</p>
         </footer>
     </div>
+    <script src="/javascript/script.js"></script>
 </body>
 
 </html>
