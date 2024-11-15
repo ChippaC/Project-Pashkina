@@ -40,11 +40,9 @@ header {
     justify-content: space-around;
 }
 
-header .logo,
-footer .footer--block .logo {
-    text-transform: uppercase;
-    font-size: 29px;
-    font-weight: 800;
+header img {
+    width: 47px;
+    height: 47px;
 }
 
 header nav {
@@ -207,9 +205,13 @@ footer .footer--block {
     justify-content: space-between;
 }
 
+footer .footer--block img {
+    width: 43px;
+    height: 43px;
+}
+
 footer .footer--block p {
     width: 300px;
-    margin: 15px 0;
 }
 
 footer .footer--block h4 {
@@ -222,11 +224,15 @@ footer .footer--block ul {
 }
 
 footer .footer--block ul li {
-    margin: 15px 0;
+    margin-top: 8px;
 }
 
 footer .footer--block ul li a {
     color: black;
+}
+
+footer .footer--block .contact--with--us p {
+    margin: 8px 0;
 }
 
 footer hr {
