@@ -26,14 +26,17 @@ img {
 }
 
 .container {
-    width: 1400px;
+    width: 100%;
     margin: 0 auto;
+    /* padding: 2% 3%; */
+    max-width: 1400px;
 }
 
 
 /*Шапка*/
 
 header {
+    width: 100%;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -46,7 +49,7 @@ header img {
 }
 
 header nav {
-    width: 50%;
+    width: 70%;
 }
 
 header nav ul {
@@ -62,12 +65,12 @@ header nav ul li {
 
 header nav ul li.active {
     background: #A4A4A4;
-    padding: 11px 19px;
+    padding: 1px 11px;
     border-radius: 5px;
 }
 
 header nav ul li:not(.active) a {
-    padding: 11px 19px;
+    padding: 1px 11px;
 }
 
 header nav ul li a {
@@ -80,11 +83,11 @@ header nav ul li:not(.active) a:hover {
     transition: all 500ms ease;
 }
 
-header>span>a {
+.btn--game>a {
     color: white;
 }
 
-header>span.btn--game>a {
+.btn--game>a {
     display: block;
     background: #A4A4A4;
     padding: 11px 19px;
@@ -92,8 +95,76 @@ header>span.btn--game>a {
     transition: all 500ms ease;
 }
 
-header>span.btn--game>a:hover {
+.btn--game>a:hover {
     transform: scale(1.1);
+}
+
+/* меню */
+
+#menu {
+    float: right;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 0 25px;
+    align-content: center;
+}
+
+#menu a {
+    /* letter-spacing: 1px; */
+    /* font-weight: 700; */
+    display: block;
+    line-height: 40px;
+}
+
+#menu li:last-child {
+    margin-right: 0;
+}
+
+#menu.active {
+    max-height: 123px;
+}
+
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+    display: none;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    background: #968e85;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: white;
+}
+
+.nav-toggle span:before,
+.nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.nav-toggle span:before {
+    top: -10px;
+}
+
+.nav-toggle span:after {
+    bottom: -10px;
 }
 
 /*Блок с изображеним игры*/
@@ -103,25 +174,16 @@ header>span.btn--game>a:hover {
     margin-bottom: -10px;
 }
 
-.game h1 {
-    font-size: 70px;
-    font-weight: 700;
-    font-style: italic;
-    text-transform: capitalize;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 /*Об игре*/
 
 .about--game {
+    width: 90%;
     padding: 100px 0;
     color: black;
 }
 
 .about--game h2 {
+    text-align: center;
     font-size: 40px;
     font-weight: 700;
 }
@@ -140,7 +202,7 @@ header>span.btn--game>a:hover {
 }
 
 .location>h2 {
-    text-align: left;
+    text-align: center;
     font-size: 40px;
     font-weight: 700;
 }
@@ -214,6 +276,7 @@ footer .footer--block img {
 
 footer .footer--block p {
     width: 300px;
+    text-align: right;
 }
 
 footer .footer--block h4 {
@@ -227,6 +290,7 @@ footer .footer--block ul {
 
 footer .footer--block ul li {
     margin-top: 8px;
+    text-align: center;
 }
 
 footer .footer--block ul li a {
@@ -241,6 +305,10 @@ footer .footer--block .contact--with--us p {
     margin: 8px 0;
 }
 
+footer .footer--block .contact--with--us--h4 {
+    text-align: right;
+}
+
 footer hr {
     margin: 30px 0;
     border: 5;
@@ -250,4 +318,98 @@ footer hr {
 
 footer>p {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .about--game {
+        width: 80%;
+    }
+
+    .btn--game>a {
+        background: none;
+    }
+
+    /* header nav {
+        width: 10%;
+    } */
+
+    .reviews--blocks {
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 15px 15px;
+    }
+
+    .block {
+        width: 40%;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .footer--block {
+        flex-wrap: wrap;
+        justify-content: none;
+    }
+
+    /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
+    #menu {
+        max-height: 0;
+        background: #565961;
+        float: none;
+        position: absolute;
+        overflow: hidden;
+        top: 60px;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+    }
+
+    /* делаем элементы списка блочными, чтобы они располагались друг под другом */
+    #menu li {
+        display: block;
+        text-align: center;
+        /* border-bottom: 1px solid #EBEBE3; */
+        margin-right: 0;
+    }
+
+    .footer--block {
+        text-align: center;
+        flex-direction: column;
+        align-content: center;
+        gap: 15px 0;
+    }
+
+    footer .footer--block .contact--with--us--h4 {
+        text-align: center;
+    }
+
+    footer .contact--with--us > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .info--words {
+        flex-direction: column;
+        width: 70%;
+        display: flex;
+    }
+
+    .reviews--blocks {
+        flex-direction: column;
+    }
+
+    .block {
+        width: 70%;
+    }
+
 }

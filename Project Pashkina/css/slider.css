@@ -1,9 +1,9 @@
 /*Слайдер*/
 
 .slider {
-    margin: 50px 0;
-    width: 1400px;
-    height: 700px;
+    /* margin: 50px 0; */
+    max-width: 1400px;
+    height: 500px;
     position: relative;
     overflow: hidden;
 }
@@ -32,8 +32,51 @@
 
 .slider .prev {
     left: 10px;
+    opacity: 1; 
+    height: 50px;
 }
 
 .slider .next {
     right: 10px;
+    opacity: 1; 
+    height: 50px;
+}
+/* 632 */
+@media (max-width: 768px) {
+
+    .slider {
+        height: 450px;
+    }
+
+    .slider-img {
+        width: auto;
+        height: auto;
+    }
+
+    .slider .prev,
+    .slider .next {
+        height: 30px;
+    }
+}
+
+@media (max-width: 632px) {
+    .slider {
+        height: 350px;
+    }
+
+    .slider .prev,
+    .slider .next {
+        height: 20px;
+    }
+}
+
+@media (max-width: 463px) {
+    .slider {
+        height: 200px;
+    }
+
+    .slider .prev,
+    .slider .next {
+        height: 15px;
+    }
 }

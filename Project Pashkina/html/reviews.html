@@ -7,7 +7,8 @@
         ЕСЛИ ПОСЛЕ ПРОВЕРКИ НЕ ОТОБРАЖАЕТСЯ, ТО ЗАНОВО НАПИСАТЬ ССЫЛКИ ПОДКЛЮЧЕНИЯ
         У АВТОРА НА КОМПЬЮТЕРЕ ВСЁ ОК
     -->
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/catalog.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,55 +22,98 @@
         <!--Шапка-->
         <Header class="container">
             <!--Логотип-->
-            <img src="/img/logo.png" alt="">
+            <img src="../img/logo.png" alt="">
             <!--Навигация-->
             <nav>
-                <ul>
-                    <li><a href="/html/index.html">Об игре</a></li>
-                    <li><a href="/html/locations.html">Локации</a></li>
-                    <li class="active"><a href="/html/reviews.html">Отзывы</a></li>
+                <div class="nav-toggle" id="nav--toggle">
+                    <span></span>
+                </div>
+                <ul id="menu">
+                    <li><a href="../html/index.html">Об игре</a></li>
+                    <li><a href="../html/locations.html">Локации</a></li>
+                    <li class="active"><a href="../html/reviews.html">Отзывы</a></li>
+                    <span class="btn--game"><a href="#">Играть</a></span>
                 </ul>
             </nav>
-            <!--Кнопка "Играть"-->
-            <span class="btn--game"><a href="#">Играть</a></span>
         </Header>
     </div>
 
     <!--Изображение игры-->
     <div class="game">
-        <img src="/img/game.png" alt="">
-        <h1>ведьма боша</h1>
+        <img src="../img/game.png" alt="">
     </div>
 
-    <!--Отзывы-->
-    <div class="container reviews">
-        <h2>Отзывы</h2>
+    <!-- Отзывы -->
+    <h1 class="reviews--h1">Отзывы</h1>
+    <div class="cards">
+        <!-- Карточка -->
+        <div class="card">
+            <!-- Верхняя часть -->
+            <div class="card__top">
+                <!-- Изображение -->
+                <a href="#" class="card__image">
+                    <img src="../img/Reviews1.png" alt="" />
+                </a>
+            </div>
+            <!-- Нижняя часть -->
+            <div class="card__bottom">
+                <!-- Описание отзыва -->
+                <h2 class="card--reviews">Олег</h2>
+                <p class="card__title">
+                    Игра захватывающая и полна неожиданных поворотов сюжета. Магический мир и яркие персонажи делают
+                    каждый уровень увлекательным. <br><br>
+                </p>
+                <p class="card--name--bottom">
+                    5/5
+                </p>
+            </div>
+        </div>
+        <!-- Карточка -->
+        <div class="card">
+            <!-- Верхняя часть -->
+            <div class="card__top">
+                <!-- Изображение -->
+                <a href="#" class="card__image">
+                    <img src="../img/Reviews2.png" alt="" />
+                </a>
+            </div>
+            <!-- Нижняя часть -->
+            <div class="card__bottom">
+                <!-- Описание отзыва -->
+                <h2 class="card--reviews">Анастасия</h2>
+                <p class="card__title">
+                    <!-- <span class="card--name">Настя</span> <br><br> -->
 
-        <!--Блоки с отзывами-->
-        <div class="reviews--blocks">
-            <div class="block">
-                <img src="/img/Reviews1.png" alt="">
-                <div class="block--text">
-                    <h3>Good</h3>
-                    <p>vitae fringilla dui id facilisis sollicitudin</p>
-                    <h5>Oleg</h5>
-                </div>
+                    Графика просто великолепна, а музыкальное сопровождение создает атмосферу волшебства. Игра очень
+                    понравилась. 
+                </p>
+                <p class="card--name--bottom">
+                    10/10
+                </p>
             </div>
-            <div class="block">
-                <img src="/img/Reviews2.png" alt="">
-                <div class="block--text">
-                    <h3>Good</h3>
-                    <p>vitae fringilla dui id facilisis sollicitudin</p>
-                    <h5>Oleg</h5>
-                </div>
+        </div>
+        <!-- Карточка -->
+        <div class="card">
+            <!-- Верхняя часть -->
+            <div class="card__top">
+                <!-- Изображение -->
+                <a href="#" class="card__image">
+                    <img src="../img/Reviews3.png" alt="" />
+                </a>
             </div>
-            <div class="block">
-                <img src="/img/Reviews3.png" alt="">
-                <div class="block--text">
-                    <h3>Good</h3>
-                    <p>vitae fringilla dui id facilisis sollicitudin</p>
-                    <h5>Oleg</h5>
-                </div>
+            <!-- Нижняя часть -->
+            <div class="card__bottom">
+                <!-- Описание отзыва -->
+                <h2 class="card--reviews">Ольга</h2>
+                <p class="card__title">
+                    <!-- <span class="card--name">Ольга</span> <br><br> -->
+
+                    Игра предлагает интересный геймплей. Несмотря на некоторые мелкие
+                    недочеты, она оставила только положительные впечатления.
+                </p>
+                <p class="card--name--bottom">
+                    9.75/10
+                </p>
             </div>
         </div>
     </div>
@@ -81,27 +125,28 @@
             <div class="container footer--block">
                 <div>
                     <!-- Лого -->
-                    <img src="/img/logo.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magni.</p>
+                    <img src="../img/logo.png" alt="">
                 </div>
                 <div>
                     <h4>О нас</h4>
                     <ul>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="https://vk.com/supermegaultragto">Контакты</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Свяжитесь с нами</h4>
+                    <h4 class="contact--with--us--h4">Свяжитесь с нами</h4>
                     <div class="contact--with--us">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, veniam?</p>
+                        <p>info@game.ru</p>
                         <p>+7(999)999-99-99</p>
                     </div>
                 </div>
             </div>
             <hr>
-            <p>© 2024-2024 Все права защищены, Павлухин Константин</p>
+            <p class="footer--pav">© 2024 Все права защищены, Павлухин Константин Игоревич, Кондратьева Ксения
+                Алексеевна, Гумбатов Джейхун Шахин</p>
         </footer>
     </div>
+    <script src="../javascript/index.js"></script>
 </body>
 
 </html>
